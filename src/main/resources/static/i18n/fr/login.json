@@ -1,0 +1,16 @@
+{
+    "login": {
+        "form": {
+            "login.placeholder": "LoginTODO",
+            "password.placeholder": "HasłoTODO",
+            "button": "ZalogujTODO",
+            "forgetPassword":"Did you forget your password?"
+
+        },
+        "messages": {
+            "error": {
+                "authentication": "Niepoprawne logowanie! roszę sprawdzić wpisaną nazwę użytkownika i hasło.TODO"
+            }
+        }
+    }
+}

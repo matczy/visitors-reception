@@ -1,0 +1,5 @@
+projectKey=my:visitor
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/my:visitor
+ceTaskId=AVpOAB3HuDrlhQ3AMnYv
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVpOAB3HuDrlhQ3AMnYv

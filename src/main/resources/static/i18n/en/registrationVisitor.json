@@ -1,0 +1,78 @@
+{
+    "registrationVisitor": {
+        "singleVisitor":{
+            "title":"Registration",
+            "mainTitle":"Visitor registration",
+            "description":"Fill in the form and receive a visit card",
+            "form": {
+                "searchPerson.placeholder": "Search visitor",
+                "name.placeholder": "Name",
+                "surname.placeholder": "Surname",
+                "company.placeholder": "Company",
+                "contactPerson.placeholder":"Select contact person",
+                "documentIdentifier.placeholder":"Identifier",
+
+                "name.label":"Name*",
+                "surname.label":"Surname*",
+                "documentIdentifier.label":"Identifier*",
+                "company.label":"Company",
+                "contactPerson.label":"Contact person",
+                "button.entry":"Entry"
+
+
+            }
+        },
+        "multiVisitors":{
+            "title":"Registration group",
+            "mainTitle":"Registration",
+
+            "description":"Fill in the form and receive a visit card",
+            "form": {
+                "searchPerson.placeholder": "Search person",
+                "name.placeholder": "Name",
+                "surname.placeholder": "Surname",
+                "company.placeholder": "Company",
+                "contactPerson.placeholder":"Select contact person",
+                "documentIdentifier.placeholder":"Identifier",
+
+                "name.label":"Name*",
+                "surname.label":"Surname*",
+                "documentIdentifier.label":"Identifier*",
+                "company.label":"Company",
+                "contactPerson.label":"contact person",
+                "button.entry":"Entry",
+                "button.addPerson":"Add visitor"
+            },
+            "list":{
+                "title":"Visitors",
+                "emptyList":"Empty list",
+                "button.edit":"Edit",
+                "button.delete":"Delete"
+            }
+        },
+        "hasVisitCard":{
+            "title":"Have visit card",
+
+            "mainTitle":"Have visit card",
+            "description":"Entry or Exit by visit card",
+            "form": {
+                "search.placeholder": "Search visit card",
+                "name.placeholder": "Name",
+                "surname.placeholder": "Surname",
+                "company.placeholder": "Company",
+                "contactPerson.placeholder":"Select contact person",
+                "documentIdentifier.placeholder":"Identifier",
+
+                "name.label":"Name*",
+                "surname.label":"Surname*",
+                "documentIdentifier.label":"Identifier*",
+                "company.label":"Company",
+                "contactPerson.label":"Contact person",
+                "button.entry":"Entry",
+                "button.exit":"Exit"
+            }
+        }
+
+    }
+
+}

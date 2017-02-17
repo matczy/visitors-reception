@@ -1,0 +1,92 @@
+<div class="tabs-container">
+
+
+            <div  class="wrapper border-bottom white-bg" layout="row"  layout-align="space-around center" style="padding:15px">
+                <div style="font-size:24px" layout-padding>
+                    {{'registrationVisitor.hasVisitCard.mainTitle' | translate}}
+
+                </div>
+
+                <div flex>
+                    <div class="my-typehead-wrapper">
+                        <!--uib-typeahead="visitCard as visitCard.id for visitCard in ctrl.searcher.searchVisitCardsSuggestions($viewValue)" -->
+                        <!--typeahead-min-length="0"-->
+                        <input type="text"
+                               ng-model-options='{ debounce: 1000 }'
+                               ng-change='ctrl.service.trySelectVisitCard()'
+                               ng-model="ctrl.searcher.visitCard" placeholder="{{'registrationVisitor.hasVisitCard.form.search.placeholder' | translate}}"
+
+                              class="form-control input-lg m-b" style="margin-bottom: 0;">
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div layout="row" layout-align="space-between center" >
+
+
+                    <div class="ibox float-e-margins" flex>
+                        <div class="ibox-content" style=" border-style: solid solid none; border-width: 3px 0 0;">
+                            <form role="form" name="formByVisitCard" novalidate>
+                                <div layout="row" layout-padding>
+                                    <div flex="50" ng-class="{'has-error':formByVisitCard.nameField.$touched && formByVisitCard.nameField.$invalid}">
+                                        <label>{{'registrationVisitor.hasVisitCard.form.name.label' | translate}}</label>
+                                        <input disabled style="background-color: #f9f9f9" required ng-model="ctrl.model.visitCard.person.name" type="text" placeholder="{{'registrationVisitor.hasVisitCard.form.name.placeholder' | translate}}" name="nameField" class="form-control input-lg">
+                                    </div>
+                                    <div flex ng-class="{'has-error':formByVisitCard.surnameField.$touched && formByVisitCard.surnameField.$invalid}">
+                                        <label>{{'registrationVisitor.hasVisitCard.form.surname.label' | translate}}</label>
+                                        <input disabled style="background-color: #f9f9f9" required ng-model="ctrl.model.visitCard.person.surname" type="text" placeholder="{{'registrationVisitor.hasVisitCard.form.surname.placeholder' | translate}}" name="surnameField" class="form-control input-lg">
+
+
+                                    </div>
+
+
+                                </div>
+                                <div layout="row" layout-padding>
+                                    <div flex="50" ng-class="{'has-error':formByVisitCard.documentIdentifierField.$touched && formByVisitCard.documentIdentifierField.$invalid}">
+                                        <label>{{'registrationVisitor.hasVisitCard.form.documentIdentifier.label' | translate}}</label>
+                                        <input disabled style="background-color: #f9f9f9" required ng-model="ctrl.model.visitCard.person.documentIdentifier" type="text" placeholder="{{'registrationVisitor.hasVisitCard.form.documentIdentifier.placeholder' | translate}}" name="documentIdentifierField" class="form-control input-lg">
+                                    </div>
+                                    <div flex>
+                                        <label>{{'registrationVisitor.hasVisitCard.form.company.label' | translate}}</label>
+                                        <div class="my-typehead-wrapper">
+                                            <input disabled style="background-color: #f9f9f9"type="text"
+                                                   ng-model="ctrl.model.visitCard.person.company" placeholder="{{'registrationVisitor.hasVisitCard.form.company.placeholder' | translate}}"
+
+                                                   uib-typeahead="company as company.name for company in ctrl.searcher.searchCompanySuggestions($viewValue)"
+                                                   typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div layout="row" layout-padding>
+                                    <div flex>
+                                        <label>{{'registrationVisitor.hasVisitCard.form.contactPerson.label' | translate}}</label>
+                                        <div class="my-typehead-wrapper">
+                                            <input disabled style="background-color: #f9f9f9" type="text"
+                                                   ng-model="ctrl.model.visitCard.contactPerson" placeholder="{{'registrationVisitor.hasVisitCard.form.contactPerson.placeholder' | translate}}"
+                                                   uib-typeahead="person as person.name+' '+person.surname+' '+person.documentIdentifier+' '+person.phone for person in ctrl.searcher.searchContactPersonsSuggestions($viewValue)"
+                                                   typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div layout="row" layout-padding>
+                                    <div flex="50" layout="row">
+                                        <button flex ng-disabled="formByVisitCard.$invalid || !ctrl.model.visitCard.active" type ="submit" ng-click="ctrl.service.registerByVisitCard(ctrl.model.visitCard, 'ENTRY')" flex="50" class="btn btn-lg btn-primary "><strong>{{'registrationVisitor.hasVisitCard.form.button.entry' | translate}}</strong></button>
+                                    </div>
+                                    <div flex layout="row">
+                                        <button flex ng-disabled="formByVisitCard.$invalid" type ="submit" ng-click="ctrl.service.registerByVisitCard(ctrl.model.visitCard, 'EXIT')" flex class="btn btn-lg btn-danger "><strong>{{'registrationVisitor.hasVisitCard.form.button.exit' | translate}}</strong></button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+</div>
+
+

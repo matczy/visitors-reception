@@ -1,0 +1,15 @@
+{
+    "login": {
+        "form": {
+            "login.placeholder": "Your login",
+            "password.placeholder": "Your password",
+            "button": "Sign in",
+            "forgetPassword":"Did you forget your password?"
+        },
+        "messages": {
+            "error": {
+                "authentication": "Failed to sign in! Please check your credentials and try again."
+            }
+        }
+    }
+}

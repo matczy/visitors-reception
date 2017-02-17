@@ -1,0 +1,36 @@
+{
+  "visitCardsList":{
+    "search": {
+        "title":"Przepustki",
+        "placeholder":"Wyszukaj przepustkę"
+    },
+    "table":{
+      "title":"Lista przepustek",
+      "filter":{
+          "showAll":"Pokaż wszystkie",
+          "onlyActive":"Tylko aktywne",
+          "onlyNotActive":"Tylko nie aktywne"
+      },
+      "headers":{
+        "status":"Status",
+        "dates":"Zakres dat",
+        "nameAndSurname":"Imię i nazwisko ",
+        "contactPerson":"Osoba kontaktowa",
+        "createdDate":"Utworzona",
+        "action":"Akcja",
+        "number":"Number"
+
+      },
+      "content":{
+        "active":"Aktywna",
+        "notActive":"Nie aktywna"
+      },
+      "button": {
+        "more": "More",
+        "deactivate":"Deactivate",
+        "print":"Print",
+        "details":"Details"
+      }
+    }
+  }
+}

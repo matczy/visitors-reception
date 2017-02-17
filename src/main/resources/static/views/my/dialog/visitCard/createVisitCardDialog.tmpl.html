@@ -1,0 +1,62 @@
+
+<div class="card">
+    <div layout="row" layout-align="start center" ></div>
+
+    <div class="modal-header">
+        <h3 class="modal-title">Utwórz wejściówkę</h3>
+    </div>
+    <div class="modal-body">
+        <div >
+
+
+            <form role="form" name="form" novalidate>
+                <div layout="row">
+                    <div flex style="padding: 8px" ng-class="{'has-error':form.dateFrom.$touched && form.dateFrom.$invalid}">
+                        <label>Data od*</label>
+                        <div class="input-group date">
+                            <input type="datetime" class="form-control" date-time ng-model="ctrl.model.visitCard.dateFrom" auto-close="true" view="date" min-view="minutes"  format="YYYY-MM-DD HH:mm" >
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div layout="row">
+                    <div flex style="padding: 8px"  ng-class="{'has-error':form.dateTo.$touched && form.dateTo.$invalid}">
+                        <label>Data do*</label>
+                        <div class="input-group date">
+                            <input type="datetime" class="form-control" date-time ng-model="ctrl.model.visitCard.dateTo"  auto-close="true" view="date" min-view="minutes"  format="YYYY-MM-DD HH:mm" >
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div layout="row">
+                    <div flex style="padding: 8px">
+                        <label>Osoba kontaktowa</label>
+                        <div class="my-typehead-wrapper">
+                            <input type="text"
+                                   ng-model="ctrl.model.visitCard.contactPerson" placeholder="Wyszukaj osobę kontaktową"
+                                   uib-typeahead="person as person.name+' '+person.surname+' '+person.documentIdentifier+' '+person.phone for person in ctrl.service.searchContactPersonsSuggestions($viewValue)"
+                                   typeahead-min-length="0" class="form-control  m-b" style="margin-bottom: 0;">
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal-footer" >
+        <button class="btn btn-success" ng-click="ctrl.service.saveOrUpdate(ctrl.model.visitCard)"
+                ng-disabled="form.$invalid">
+            Zapisz
+        </button>
+        <button class="btn btn-default" ng-click="ctrl.service.cancel()">
+            Anuluj
+        </button>
+
+    </div>
+</div>

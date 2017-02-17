@@ -1,0 +1,78 @@
+{
+    "registrationVisitor": {
+        "singleVisitor":{
+            "title":"Rejestracja",
+            "mainTitle":"Rejestracja Gości",
+            "description":"Wypełnij formularz i odbierz przepustkę",
+            "form": {
+                "searchPerson.placeholder": "Znajdź osobę",
+                "name.placeholder": "Imię",
+                "surname.placeholder": "Nazwisko",
+                "company.placeholder": "Firma",
+                "contactPerson.placeholder":"Wybierz osobę kontaktową",
+                "documentIdentifier.placeholder":"Pesel",
+
+                "name.label":"Imię*",
+                "surname.label":"Nazwisko*",
+                "documentIdentifier.label":"Pesel*",
+                "company.label":"Firma",
+                "contactPerson.label":"Osoba kontaktowa",
+                "button.entry":"Wejście"
+
+
+            }
+        },
+        "multiVisitors":{
+            "title":"Rejestracja grupy",
+            "mainTitle":"Rejestracja",
+
+            "description":"Wypełnij formularz i odbierz przepustki",
+            "form": {
+                "searchPerson.placeholder": "Znajdź osobę",
+                "name.placeholder": "Imię",
+                "surname.placeholder": "Nazwisko",
+                "company.placeholder": "Firma",
+                "contactPerson.placeholder":"Wybierz osobę kontaktową",
+                "documentIdentifier.placeholder":"Pesel",
+
+                "name.label":"Imię*",
+                "surname.label":"Nazwisko*",
+                "documentIdentifier.label":"Pesel*",
+                "company.label":"Firma",
+                "contactPerson.label":"Osoba kontaktowa",
+                "button.entry":"Wejście",
+                "button.addPerson":"Dodaj osobę"
+            },
+            "list":{
+                "title":"Lista osób",
+                "emptyList":"Lista pusta",
+                "button.edit":"Edytuj",
+                "button.delete":"Usuń"
+            }
+        },
+        "hasVisitCard":{
+            "title":"Mam przepustkę",
+
+            "mainTitle":"Mam przepustkę",
+            "description":"Wejście lub wyjście na podstawie aktualnej przepustki",
+            "form": {
+                "search.placeholder": "Znajdź przepustkę",
+                "name.placeholder": "Imię",
+                "surname.placeholder": "Nazwisko",
+                "company.placeholder": "Firma",
+                "contactPerson.placeholder":"Wybierz osobę kontaktową",
+                "documentIdentifier.placeholder":"Pesel",
+
+                "name.label":"Imię*",
+                "surname.label":"Nazwisko*",
+                "documentIdentifier.label":"Pesel*",
+                "company.label":"Firma",
+                "contactPerson.label":"Osoba kontaktowa",
+                "button.entry":"Wejście",
+                "button.exit":"Wyjście"
+            }
+        }
+
+    }
+
+}

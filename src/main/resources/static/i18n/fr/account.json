@@ -1,0 +1,56 @@
+{
+  "account":{
+    "title":"Reset password",
+    "finish":{
+      "keymissing":"The password reset key is missing.",
+      "dontmatch":"The password and its confirmation do not match!",
+      "messages":{
+        "info":"Choose a new password",
+        "error":"Your password couldn't be reset. Remember a password request is only valid for 24 hours.",
+        "success":"<strong>Your password has been reset.</strong> Please <a class='alert-link' href='#/login'>sign in</a>.</p>"
+      },
+      "form":{
+        "newpassword":{
+          "label":"New password",
+          "placeholder":"New password",
+          "validation":{
+            "required":"Your password is required.",
+            "minlength":"Your password is required to be at least 5 characters.",
+            "maxlength":"Your password cannot be longer than 50 characters."
+          }
+        },
+        "confirmPassword":{
+          "label":"New password confirmation",
+          "placeholder":"New password confirmation",
+          "validation":{
+            "required":"Your password is required.",
+            "minlength":"Your password confirmation is required to be at least 5 characters.",
+            "maxlength":"Your password confirmation cannot be longer than 50 characters."
+          }
+        },
+        "button":"Reset Password"
+      }
+    },
+    "request":{
+      "messages":{
+        "notfound":"<strong>E-Mail address isn't registered!</strong> Please check and try again.",
+        "info":"Enter the e-mail address you used to register.",
+        "success":"Check your e-mails for details on how to reset your password."
+      },
+      "form":{
+        "email":{
+          "label":"E-mail",
+          "placeholder":"E-mail",
+          "validation":{
+            "required":"Your e-mail is required.",
+            "invalid":"Your e-mail is invalid.",
+            "minlength":"Your e-mail is required to be at least 5 characters.",
+            "maxlength":"Your e-mail cannot be longer than 100 characters."
+          }
+        },
+
+        "button":"Reset"
+      }
+    }
+  }
+}

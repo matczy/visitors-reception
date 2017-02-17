@@ -1,0 +1,109 @@
+
+<div class="card">
+    <div layout="row" layout-align="start center" ></div>
+
+    <div class="modal-header">
+        <h3 class="modal-title">{{'global.registerVisitor.showDetails.title' |translate}}</h3>
+    </div>
+    <div class="modal-body">
+        <div >
+            <form role="form" name="form" novalidate>
+
+                <div layout="row" layout-padding>
+                    <div>
+                        <label>{{'global.registerVisitor.showDetails.entryDate' |translate}}</label>
+                        <div>{{ctrl.model.data.entryDate | date:'yyyy-MM-dd HH:mm'}}</div>
+                    </div>
+
+                </div>
+
+                <div layout="row" layout-padding>
+                    <div>
+                        <label>{{'global.registerVisitor.showDetails.exitDate' |translate}}</label>
+                        <div>{{ctrl.model.data.exitDate| date:'yyyy-MM-dd HH:mm'}}</div>
+                    </div>
+
+                </div>
+
+
+                <div layout="row" layout-padding>
+                    <div>
+                        <label for="visitor">{{'global.registerVisitor.showDetails.visitor' |translate}}</label>
+                        <div id="visitor">{{ctrl.model.data.person.name}} {{ctrl.model.data.person.surname}}  {{ctrl.model.data.person.documentIdentifier}}</div>
+                        <span ng-if="ctrl.model.data.person.company">
+                            <i class="fa fa-building"></i>{{ctrl.model.data.person.company.name}}
+                        </span>
+                        <div>
+                            <small>
+                                <span ng-if="ctrl.model.data.person.phone"><i class="fa fa-phone"></i> {{ctrl.model.data.person.phone}}, </span>
+                                <span ng-if="ctrl.model.data.person.email"><i class="fa fa-email"></i> {{ctrl.model.data.person.email}}</span>
+                            </small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div layout="row" layout-padding>
+                    <div>
+                        <label for="contactPerson">{{'global.registerVisitor.showDetails.contactPerson' |translate}}</label>
+                        <div id="contactPerson">{{ctrl.model.data.contactPerson.name}} {{ctrl.model.data.contactPerson.surname}}  {{ctrl.model.data.contactPerson.documentIdentifier}}</div>
+                        <span ng-if="ctrl.model.data.contactPerson.company">
+                            <i class="fa fa-building"></i>{{ctrl.model.data.contactPerson.company.name}}
+                        </span>
+                        <div>
+                            <small>
+                                <span ng-if="ctrl.model.data.contactPerson.phone"><i class="fa fa-phone"></i> {{ctrl.model.data.contactPerson.phone}}, </span>
+                                <span ng-if="ctrl.model.data.contactPerson.email"><i class="fa fa-email"></i> {{ctrl.model.data.contactPerson.email}}</span>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div layout="row" layout-padding>
+                    <div>
+                        <label>{{'global.registerVisitor.showDetails.visitCard.title' |translate}}</label>
+                        <div>{{ctrl.model.data.visitCard.number}}
+                            <span ng-if="ctrl.model.data.visitCard.active">
+                                <span class="label label-primary">
+                                    <!--{{'visitCardsList.table.content.active'|translate}}-->
+                                 {{'global.registerVisitor.showDetails.visitCard.active' |translate}}
+                                </span>
+                            </span>
+                            <span ng-if="!ctrl.model.data.visitCard.active">
+                                <span class="label label-danger" style="margin-left:6px;margin-right:6px">
+                                    <!--{{'visitCardsList.table.content.notActive'|translate}}-->
+                                    {{'global.registerVisitor.showDetails.visitCard.notActive' |translate}}
+                                </span>
+                            </span>
+                            <div>
+                                <span>
+                                    <label>{{'global.registerVisitor.showDetails.visitCard.dateFrom' |translate}}:</label> {{ctrl.model.data.visitCard.dateFrom| date:'yyyy-MM-dd HH:mm'}}
+                                </span>
+                                <span>
+                                    <label>{{'global.registerVisitor.showDetails.visitCard.dateTo' |translate}}:</label> {{ctrl.model.data.visitCard.dateTo| date:'yyyy-MM-dd HH:mm'}}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    </div>
+
+                <div layout="row" layout-padding>
+                    <div>
+                        <label>{{'global.registerVisitor.showDetails.comment' |translate}}</label>
+                        <div>{{ctrl.model.data.comment}}</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="ctrl.service.cancel()">
+            {{'global.button.close' | translate}}
+        </button>
+
+    </div>
+</div>

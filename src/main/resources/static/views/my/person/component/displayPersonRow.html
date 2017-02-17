@@ -1,0 +1,13 @@
+<div style="margin-bottom: 3px">
+    <b>{{ctrl.person.name}} {{ctrl.person.surname}}</b>
+         <span ng-if="ctrl.person.type.name=='Gość'">
+                      <span class="label label-warning" style="margin-left:15px">{{ctrl.person.type.name}}</span>
+         </span>
+          <span ng-if="ctrl.person.type.name=='Pracownik'">
+                      <span class="label label-primary" style="margin-left:15px">{{ctrl.person.type.name}}</span>
+          </span>
+</div>
+<div>
+    <span ng-if="ctrl.person.company">Firma: {{ctrl.person.company.name}}, </span> <span ng-if="ctrl.person.documentIdentifier">Dokument nr: {{ctrl.person.documentIdentifier}}</span>
+</div>
+

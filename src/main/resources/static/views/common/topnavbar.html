@@ -1,0 +1,59 @@
+
+
+<div class="row border-bottom" ng-controller="NavbarController as navCtrl" style="margin-bottom: 20px">
+    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0; background-color: white">
+        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary "
+           ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar"
+           style="margin-left:10px"><i class="fa fa-bars"></i>
+        </a>
+
+        <div class="navbar-header">
+
+                   <span class ="minimalize-styl-2" style="font-size: 17px;">Visitor Panel</span>
+
+
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li uib-dropdown show-if-authenticated="true">
+            <a href uib-dropdown-toggle>  <i class="fa fa-tasks"></i> </a>
+                <ul role="menu" uib-dropdown-menu>
+                <li class="hidden-xs">
+                <a data-ng-click="navCtrl.register()" href=""><i
+                class="zmdi zmdi-settings"></i>
+                    {{'global.topnavbar.registration' | translate}}</a>
+                </li>
+                </ul>
+            </li>
+
+
+            <li show-if-authenticated="true">
+                <a data-ng-click="navCtrl.logout($event)">
+                <i class="fa fa-sign-out"></i> {{'global.topnavbar.logout' | translate}}
+            </a>
+            </li>
+            <li show-if-authenticated="false">
+                <a data-ng-click="navCtrl.login($event)">
+                <i class="fa fa-sign-out"></i>{{'global.topnavbar.login' | translate}}
+            </a>
+            </li>
+            <li ui-sref-active="active" class="dropdown pointer" ng-controller="LanguageController">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                        <span>
+                            <span class="glyphicon glyphicon-flag"></span>
+                            <span class="hidden-sm" >{{'global.topnavbar.language' | translate}}</span>
+                            <b class="caret"></b>
+                        </span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li active-menu="{{language}}" ng-repeat="language in languages">
+                        <a href="" ng-click="changeLanguage(language)" data-toggle="collapse" data-target=".navbar-collapse.in">{{language | findLanguageFromKey}}</a>
+                    </li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+    </nav>
+</div>

@@ -1,0 +1,12 @@
+<div class="btn-group" uib-dropdown>
+    <button type="button" class="btn btn-sm btn-warning" uib-dropdown-toggle><i class="fa fa-print"></i>
+        {{'global.visitCard.title' | translate}} <span class="caret"></span>
+    </button>
+    <ul role="menu" uib-dropdown-menu="">
+        <li><a ng-click="ctrl.printVisitCard(ctrl.visitor,ctrl.contactPerson,1)">{{'global.visitCard.oneDay' | translate}}</a></li>
+        <li><a ng-click="ctrl.printVisitCard(ctrl.visitor,ctrl.contactPerson,2)">{{'global.visitCard.twoDay' | translate}}</a></li>
+        <li><a ng-click="ctrl.printVisitCard(ctrl.visitor,ctrl.contactPerson,5)">{{'global.visitCard.fiveDay' | translate}}</a></li>
+        <li class="divider"></li>
+        <li><a ng-click="ctrl.showVisitCardCreator(ctrl.visitor, ctrl.contactPerson)">{{'global.visitCard.more' | translate}}</a></li>
+    </ul>
+</div>

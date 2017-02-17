@@ -1,0 +1,46 @@
+{
+  "register":{
+    "title":"Rejestracja konta",
+    "message":{
+      "success":"Rejestracja zakończona poprawnie",
+      "error":{
+        "title":"Rejestracja zakończona niepowodzeniem",
+        "description":"Spróbuj ponownie."
+      },
+      "errorLogin":{
+        "title":"Podany Login jest już zarejestrowany",
+        "description":"Prosze podać inny."
+      },
+      "errorEmail":{
+        "title":"Wybrany E-mail jest juz zajety",
+        "description":"Prosze podać inny."
+      },
+      "errorPassword":{
+        "title":"Podane hasła nie są zgodne!"
+      }
+    },
+    "form":{
+      "userName":{
+        "label":"Nazwa użytkownika*",
+        "placeholder":"Nazwa użytkownika"
+      },
+      "email":{
+        "label":"E-mail",
+        "placeholder":"E-mail"
+      },
+      "newPassword":{
+        "label":"Nowe hasło*",
+        "placeholder":"Nowe hasło"
+      },
+      "repeatPassword":{
+        "label":"Powtórz hasło*",
+        "placeholder":"Powtórz hasło"
+      },
+      "authorities":{
+        "label":"Uprawnienia",
+        "placeholder":"Uprawnienia",
+        "option":"Wybierz uprawnienia"
+      }
+    }
+  }
+}

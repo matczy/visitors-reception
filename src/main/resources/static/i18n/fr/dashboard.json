@@ -1,0 +1,30 @@
+{
+  "dashboard":{
+    "tabs":{
+      "allVisit":{
+        "label":"Wizyty",
+        "description":"Wszystkie"
+      },
+      "todayVisit":{
+        "label":"Wizyty",
+        "description":"Dzisiaj"
+      },
+      "visitCard":{
+        "label":"Przepustki",
+        "description":"Aktywne"
+      },
+      "visitorsOnObject":{
+        "label":"Goście",
+        "description":"Na obiekcie"
+      }
+    },
+    "plots":{
+      "last24h":{
+        "title":"Ostatnie 24h"
+      },
+      "last30Days":{
+        "title":"Ostatnie 30 dni"
+      }
+    }
+}
+}

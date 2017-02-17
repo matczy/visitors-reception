@@ -1,0 +1,93 @@
+{
+    "global": {
+        "topnavbar":{
+            "language":"Language",
+            "logout":"Logout",
+            "login":"Login",
+            "registration":"Registration"
+        },
+        "navigation":{
+            "dashboard":"Dashboard",
+            "visitorRegistration":"Registration visitor",
+            "visitorList":"Visitors",
+            "visitCardList":"Visit cards",
+            "history":"History"
+        },
+        "button":{
+            "edit":"Edit",
+            "addPerson":"Add visitor",
+            "save":"Save",
+            "cancel":"Cancel",
+            "close":"Close"
+        }, "person":{
+            "title":"Person"
+        },
+        "person.form": {
+            "name.placeholder": "Name",
+            "surname.placeholder": "Surname",
+            "company.placeholder": "Company",
+            "contactPerson.placeholder":"Choose contact person",
+            "documentIdentifier.placeholder":"Identifier",
+            "phone.placeholder":"Phone",
+            "type.label":"Type",
+            "email.placeholder":"Email",
+            "emailConfirm.label":"Confirm email",
+
+            "name.label":"Name*",
+            "surname.label":"Surname*",
+            "documentIdentifier.label":"Identifier*",
+            "company.label":"Company",
+            "contactPerson.label":"Contact person",
+            "button.entry":"Entry",
+            "phone.label":"Phone",
+            "type.placeholder":"Choose type",
+            "email.label":"Email"
+
+
+        },
+        "visitCard":{
+            "title":"Visit card",
+            "oneDay":"One day",
+            "twoDay":"Two day",
+            "fiveDay":"Five day",
+            "more":"More",
+            "showDetails":{
+                "title":"Visit card",
+                "number":"Number",
+                "dateFrom":"Date from",
+                "dateTo":"Date to",
+                "status":"Status",
+                "createdDate":"Created date",
+                "active":"Active",
+                "notActive":"Not active",
+                "visitor":"Visitor",
+                "contactPerson":"Contact person"
+            }
+        },
+        "registerVisitor":{
+            "showDetails":{
+                "title":"Registration",
+
+                "comment":"Comment",
+                "entryDate":"Entry date",
+                "exitDate":"Exit date",
+                "visitCard":{
+                    "title":"Visit card",
+                    "number":"Number",
+                    "dateFrom":"Valid from",
+                    "dateTo":"Valid to",
+                    "status":"Status",
+                    "createdDate":"Creted date",
+                    "active":"Active",
+                    "notActive":"Not active",
+                    "visitor":"Visitor",
+                    "contactPerson":"Contact person"
+                },
+                "contactPerson":"Contact person",
+                "visitor":"Visitor"
+            }
+        }
+
+    }
+
+}

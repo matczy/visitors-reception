@@ -1,0 +1,144 @@
+<div class="tabs-container">
+            <div  class="wrapper border-bottom white-bg page-heading" layout="row"  layout-align="space-around center" style="padding:15px">
+                <div style="font-size:24px" layout-padding>
+                    {{'registrationVisitor.multiVisitors.mainTitle' | translate}}
+
+                </div>
+
+                <div flex>
+                    <div class="my-typehead-wrapper">
+                        <input type="text"
+                               ng-model="ctrl.searcher.person" placeholder="{{'registrationVisitor.multiVisitors.form.searchPerson.placeholder' | translate}}"
+                               uib-typeahead="person as person.name+' '+person.surname+' '+person.documentIdentifier for person in ctrl.searcher.searchPersonsSuggestions($viewValue)"
+                               typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div layout="row" layout-align="space-between center" layout-margin="20">
+                    <div class="ibox float-e-margins" flex="50"  >
+                            <div class="ibox-content" id="form_content" style=" border-style: solid solid none; border-width: 3px 0 0;" >
+                                <form role="form" name="form" novalidate>
+                                    <div layout="row" layout-padding>
+                                        <div flex="50" ng-class="{'has-error':form.nameField.$touched && form.nameField.$invalid}">
+                                            <label>{{'registrationVisitor.multiVisitors.form.name.label' | translate}}</label>
+                                            <input required ng-model="ctrl.model.person.name" ng-change ="ctrl.service.manuallyChange()"  type="text" placeholder="{{'registrationVisitor.multiVisitors.form.name.placeholder' | translate}}" name="nameField" class="form-control input-lg">
+                                        </div>
+                                        <div flex ng-class="{'has-error':form.surnameField.$touched && form.surnameField.$invalid}">
+                                            <label>{{'registrationVisitor.multiVisitors.form.surname.label' | translate}}</label>
+                                            <input required ng-model="ctrl.model.person.surname" ng-change ="ctrl.service.manuallyChange()"  type="text" placeholder="{{'registrationVisitor.multiVisitors.form.surname.placeholder' | translate}}" name="surnameField" class="form-control input-lg">
+
+
+                                        </div>
+
+
+                                    </div>
+                                    <div layout="row" layout-padding>
+                                        <div flex="50" ng-class="{'has-error':form.documentIdentifierField.$touched && form.documentIdentifierField.$invalid}">
+                                            <label>{{'registrationVisitor.multiVisitors.form.documentIdentifier.label' | translate}}</label>
+                                            <input required ng-model="ctrl.model.person.documentIdentifier" ng-change ="ctrl.service.manuallyChange()"  type="text" placeholder="{{'registrationVisitor.multiVisitors.form.documentIdentifier.placeholder' | translate}}" name="documentIdentifierField" class="form-control input-lg">
+                                        </div>
+                                        <div flex>
+                                            <label>{{'registrationVisitor.multiVisitors.form.company.label' | translate}}</label>
+                                            <div class="my-typehead-wrapper">
+                                                <input type="text"
+                                                       ng-model="ctrl.model.person.company" ng-change ="ctrl.service.manuallyChange()" placeholder="{{'registrationVisitor.multiVisitors.form.company.placeholder' | translate}}"
+
+                                                       uib-typeahead="company as company.name for company in ctrl.searcher.searchCompanySuggestions($viewValue)"
+                                                       typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div layout="row" layout-padding>
+                                        <div flex>
+                                            <label>{{'registrationVisitor.multiVisitors.form.contactPerson.label' | translate}}</label>
+                                            <div class="my-typehead-wrapper">
+                                                <input type="text"
+                                                       ng-model="ctrl.model.contactPerson" placeholder="{{'registrationVisitor.multiVisitors.form.contactPerson.placeholder' | translate}}"
+                                                       uib-typeahead="person as person.name+' '+person.surname+' '+person.documentIdentifier+' '+person.phone for person in ctrl.searcher.searchContactPersonsSuggestions($viewValue)"
+                                                       typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div layout="row" layout-padding show-if-authenticated="true">
+                                        <div flex="50">
+                                            <!--//TODO add translate-->
+                                            <label>Data od*</label>
+                                            <div class="input-group date">
+                                                <input type="datetime" class="form-control input-lg" date-time ng-model="ctrl.model.visitCard.dateFrom" auto-close="true" view="date" min-view="minutes" format="YYYY-MM-DD HH:mm">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+
+                                        </div>
+                                        <div flex>
+                                            <!--//TODO add translate-->
+
+                                            <label>Data do*</label>
+                                            <div class="input-group date">
+                                                <input type="datetime" class="form-control input-lg" date-time ng-model="ctrl.model.visitCard.dateTo"  auto-close="true" view="date" min-view="minutes"  format="YYYY-MM-DD HH:mm" >
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div layout="row" layout-padding>
+                                        <button ng-disabled="form.$invalid" type ="submit" ng-click="ctrl.service.addToVisitorsList(ctrl.model.person, ctrl.model.contactPerson)" flex class="btn btn-lg btn-success "><strong>{{'registrationVisitor.multiVisitors.form.button.addPerson' | translate}}</strong></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                    </div>
+
+
+                    <div flex class="ibox float-e-margins" >
+                        <div class="ibox-title">
+                            <h5>{{'registrationVisitor.multiVisitors.list.title' | translate}}</h5>
+
+                        </div>
+                        <!--ng-style="{'height':ctrl.size}-->
+                            <div class="ibox-content">
+
+                                <div>
+                                    <div class="feed-activity-list" style="display: block; height: 249px;overflow-y: auto;">
+                                        <div ng-if="ctrl.model.visitorsList.length<=0">
+                                            {{'registrationVisitor.multiVisitors.list.emptyList' | translate}}
+                                        </div>
+                                        <div ng-repeat="visit in ctrl.model.visitorsList" class="feed-element">
+                                            <div class="media-body ">
+                                                <small class="pull-right">
+                                                    <button ng-disabled="!!visit.person.id" ng-click="ctrl.service.showEditDialog(visit, $index)" type="button" class="btn btn-sm btn-default">
+                                                        {{'registrationVisitor.multiVisitors.list.button.edit' | translate}} </button>
+                                                    <button ng-click="ctrl.service.deleteFromList($index)" type="button" class="btn btn-sm btn-default" >
+                                                        {{'registrationVisitor.multiVisitors.list.button.delete' | translate}}</button>
+                                                </small>
+                                                <strong>{{visit.person.name}} {{visit.person.surname}} </strong> <span ng-if="visit.person.phone"> <i class="fa fa-phone"></i>{{visit.person.phone}}, </span> {{visit.person.company.name}} <br>
+
+                                                <small class="text-muted">{{visit.contactPerson.name}} {{visit.contactPerson.surname}} <span ng-if="visit.contactPerson.phone"> <i class="fa fa-phone"></i>{{visit.contactPerson.phone}}, </span>   {{visit.contactPerson.company.name}}
+                                                </small>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div layout="row" layout-padding>
+                                        <button ng-disabled="ctrl.model.visitorsList.length<=0" type ="submit" ng-click="ctrl.service.register()" flex class="btn btn-lg btn-primary "><i class="fa fa-arrow-down"></i><strong>{{'registrationVisitor.multiVisitors.form.button.entry' | translate}}</strong></button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+</div>
+
+

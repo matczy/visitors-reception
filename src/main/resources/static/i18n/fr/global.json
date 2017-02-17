@@ -1,0 +1,93 @@
+{
+    "global": {
+        "topnavbar":{
+            "language":"Język",
+            "logout":"Wyloguj",
+            "login":"Zaloguj",
+            "registration":"Rejestracja"
+        },
+        "navigation":{
+            "dashboard":"Pulpit",
+            "visitorRegistration":"Rejestracja gość",
+            "visitorList":"Lista gości",
+            "visitCardList":"Lista przepustek",
+            "history":"Historia"
+        },
+        "button":{
+            "edit":"Edytuj",
+            "addPerson":"Dodaj osobę",
+            "save":"Zapisz",
+            "cancel":"Anuluj",
+            "close":"Zamknij"
+
+        }, "person":{
+            "title":"Osoba"
+        },
+        "person.form": {
+            "name.placeholder": "Imię",
+            "surname.placeholder": "Nazwisko",
+            "company.placeholder": "Firma",
+            "contactPerson.placeholder":"Wybierz osobę kontaktową",
+            "documentIdentifier.placeholder":"Pesel",
+            "phone.placeholder":"Telefon",
+            "type.label":"Typ",
+            "email.placeholder":"Email",
+            "emailConfirm.label":"Potwierdzenie email",
+
+            "name.label":"Imię*",
+            "surname.label":"Nazwisko*",
+            "documentIdentifier.label":"Pesel*",
+            "company.label":"Firma",
+            "contactPerson.label":"Osoba kontaktowa",
+            "button.entry":"Wejście",
+            "phone.label":"Telefon",
+            "type.placeholder":"Wybierz typ",
+            "email.label":"Email"
+        },
+            "visitCard":{
+                "title":"Wizytówka",
+                "oneDay":"Jednodniowa",
+                "twoDay":"Dwudniowa",
+                "fiveDay":"Pięciodniowa",
+                "more":"Więcej",
+                "showDetails":{
+                    "title":"Visit card",
+                    "number":"Number",
+                    "dateFrom":"Date from",
+                    "dateTo":"Date to",
+                    "status":"Status",
+                    "createdDate":"Created date",
+                    "active":"Active",
+                    "notActive":"Not active",
+                    "visitor":"Visitor",
+                    "contactPerson":"Contact person"
+                }
+            },
+        "registerVisitor":{
+            "showDetails":{
+                "title":"Rejestracja",
+
+                "comment":"Komentarz",
+                "entryDate":"Data wejścia",
+                "exitDate":"Data wyjścia",
+                "visitCard":{
+                    "title":"Przpustka",
+                    "number":"Numer",
+                    "dateFrom":"Ważna od",
+                    "dateTo":"Ważna do",
+                    "status":"Status",
+                    "createdDate":"Data utworzenia",
+                    "active":"Aktywna",
+                    "notActive":"Nie aktywna",
+                    "visitor":"Gość",
+                    "contactPerson":"Osoba kontaktowa"
+                },
+                "contactPerson":"Osoba kontaktowa",
+                "visitor":"Gość"
+            }
+        }
+
+
+    }
+
+}

@@ -1,0 +1,228 @@
+<!--
+* INSPINIA - Responsive Admin Theme
+* Version 2.5
+*
+-->
+
+<!DOCTYPE html>
+<html ng-app="visitorApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Bootstrap -->
+
+    <!-- Font awesome -->
+    <link href="assets/css/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Main Inspinia CSS files -->
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link type="text/css" media="screen" href="3rd_party/bower_components/angular-material/angular-material.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link id="loadBefore" href="assets/css/style.css" rel="stylesheet">
+    <link type="text/css" media="screen" rel="stylesheet" href="3rd_party/bower_components/toastr/toastr.css">
+    <link type="text/css" media="screen" rel="stylesheet" href="assets/css/plugins/datapicker/angular-datapicker.css">
+    <link type="text/css" media="screen" href="3rd_party/bower_components/chosen/chosen.css"rel="stylesheet">
+    <link type="text/css" media="screen" rel="stylesheet"  href="3rd_party/bower_components/angular-chart.js/dist/angular-chart.css">
+    <link type="text/css" media="screen" rel="stylesheet"  href="3rd_party/bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+
+
+</head>
+
+<body style="  left: 0px;  margin: 0 0 0 0px;">
+<!--style="  left: 70px;  margin: 0 0 0 70px;"-->
+
+<!-- Main view  -->
+<!-- Wrapper-->
+<div class="mainView" ng-controller="MainController as mainCtrl">
+
+    <!-- Navigation -->
+    <div ng-include="'views/common/navigation.html'"></div>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg"     style="margin: 0 0 0 0;">
+
+        <!-- Page wrapper -->
+
+        <div ng-include="'views/common/topnavbar.html'"></div>
+
+        <!-- Main view  -->
+        <div data-ui-view="content"></div>
+
+        <!-- Footer -->
+        <div ng-include="'views/common/footer.html'"></div>
+
+    </div>
+    <!-- End page wrapper-->
+
+
+</div>
+
+
+<!-- jQuery and Bootstrap -->
+<script src="3rd_party/bower_components/jquery/dist/jquery.js"></script>
+<script src="3rd_party/bower_components/jquery-ui/jquery-ui.js"></script>
+<script src="3rd_party/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<!-- MetsiMenu -->
+<!--<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>-->
+
+<!-- SlimScroll -->
+<!--<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>-->
+
+<!-- Peace JS -->
+<!--<script src="js/plugins/pace/pace.min.js"></script>-->
+
+<!-- Custom and plugin javascript -->
+<!--<script src="js/inspinia.js"></script>-->
+
+<!-- Main Angular scripts-->
+<script src="3rd_party/bower_components/angular/angular.js"></script>
+<script src="3rd_party/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<!--<script src="3rd_party/bower_components/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>-->
+<!--<script src="3rd_party/bower_components/angular-translate/angular-translate.min.js"></script>-->
+<script src="3rd_party/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+<!--<script src="3rd_party/bower_components/plugins/angular-idle/angular-idle.js"></script>-->
+<script src="3rd_party/bower_components/angular-resource/angular-resource.js"></script>
+<script src="3rd_party/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+
+<script src="3rd_party/bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="3rd_party/bower_components/angular-aria/angular-aria.min.js"></script>
+
+<script src="3rd_party/bower_components/angular-material/angular-material.js"></script>
+<script src="3rd_party/bower_components/lodash/lodash.js"></script>
+
+<script src="3rd_party/bower_components/restangular/dist/restangular.js"></script>
+<script src="3rd_party/bower_components/toastr/toastr.js"></script>
+<script src="3rd_party/bower_components/moment/moment.js"></script>
+<script src="3rd_party/bower_components/angular-moment/angular-moment.min.js"></script>
+<script src="js/angular/angular-datepicker.js"></script>
+<script src="3rd_party/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+<script  src="3rd_party/bower_components/chosen/chosen.jquery.js"></script>
+<script src="3rd_party/bower_components/angular-chosen-localytics/chosen.js"></script>
+<script src="3rd_party/bower_components/Chart.js/Chart.min.js"></script>
+
+<script src="3rd_party/bower_components/angular-chart.js/angular-chart.js"></script>
+<script src="3rd_party/bower_components/angular-cookies/angular-cookies.js"></script>
+
+<script src="3rd_party/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+
+<script src="3rd_party/bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+
+<script src="3rd_party/bower_components/angular-translate/angular-translate.js"></script>
+<script src="3rd_party/bower_components/messageformat/messageformat.js"></script>
+<script src="3rd_party/bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+<script src="3rd_party/bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+<script src="3rd_party/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="3rd_party/bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+<script src="3rd_party/bower_components/angular-utils-pagination/dirPagination.js"></script>
+
+
+
+
+
+<!--
+ You need to include this script on any page that has a Google Map.
+ When using Google Maps on your own site you MUST signup for your own API key at:
+ https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+ After your sign up replace the key in the URL below..
+-->
+<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>-->
+
+<!-- Anglar App Script -->
+<script src="js/loginModule.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/config.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/controllers.js"></script>
+
+
+<script src="js/app/login/service/account.service.js"></script>
+<script src="js/app/login/service/principal.service.js"></script>
+<script src="js/app/login/service/authority.directive.js"></script>
+<script src="js/app/login/service/auth.session.service.js"></script>
+<script src="js/app/login/service/auth.service.js"></script>
+<script src="js/app/login/controller/login.controller.js"></script>
+<script src="js/app/login/controller/reset.request.controller.js"></script>
+<script src="js/app/login/controller/reset.finish.controller.js"></script>
+
+
+<script src="js/app/login/interceptor/auth.interceptor.js"></script>
+<script src="js/app/login/interceptor/errorhandler.interceptor.js"></script>
+
+<script src="js/app/person/component/displayPersonRow.js"></script>
+
+<script src="js/app/common/smartTablePaginationScroll.js"></script>
+
+<script src="js/app/message/MessageService.js"></script>
+
+<script src="js/app/person/model/PersonVO.js"></script>
+<script src="js/app/person/factory/PersonVOFactory.js"></script>
+<script src="js/app/person/service/PersonService.js"></script>
+<script src="js/app/registration/service/RegisterVisitorService.js"></script>
+<script src="js/app/company/CompanyService.js"></script>
+
+<script src="js/app/dialog/DialogFactory.js"></script>
+<script src="js/app/dialog/PersonCreatorDialogController.js"></script>
+<script src="js/app/dialog/VisitorDialogController.js"></script>
+<script src="js/app/person/component/showPersonCreateDialogComponent.js"></script>
+
+<script src="js/app/registration/RegisterVisitorController.js"></script>
+<script src="js/app/registration/MultiRegistrationVisitorController.js"></script>
+<script src="js/app/registration/RegisterVisitorByVisitCardController.js"></script>
+
+
+<script src="js/app/person/controller/PersonsListController.js"></script>
+
+<script src="js/app/visitCard/model/VisitCardVO.js"></script>
+<script src="js/app/visitCard/factory/VisitCardVOFactory.js"></script>
+<script src="js/app/visitCard/printer/PrinterCardGenerator.js"></script>
+<script src="js/app/visitCard/printer/PrinterCardService.js"></script>
+<script src="js/app/visitCard/service/VisitCardService.js"></script>
+
+<script src="js/app/dialog/VisitCardDialogController.js"></script>
+
+
+
+<script src="js/app/registration/model/RegisterVisitorVO.js"></script>
+<script src="js/app/registration/factory/RegisterVisitorVOFactory.js"></script>
+<script src="js/app/registration/service/RegisterVisitorService.js"></script>
+<script src="js/app/visitCard/component/visitCardCreateButtonComponent.js"></script>
+<script src="js/app/registration/controller/HistoryRegistrationListController.js"></script>
+<script src="js/app/visitCard/controller/VisitsCardListController.js"></script>
+<script src="js/app/navbar/navbar.controller.js"></script>
+<script src="js/app/register/model/ProfileVO.js"></script>
+<script src="js/app/register/factory/ProfileVOFactory.js"></script>
+<script src="js/app/register/service/ProfileService.js"></script>
+<script src="js/app/register/register.controller.js"></script>
+<script src="js/app/dashboard/DashboardController.js"></script>
+<script src="js/app/dialog/DetailsDialogController.js"></script>
+
+<script src="js/app/language/language.controller.js"></script>
+<script src="js/app/language/language.service.js"></script>
+
+<script src="js/app/mainController/main.js"></script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "login": {
+        "form": {
+            "login.placeholder": "Login",
+            "password.placeholder": "Hasło",
+            "button": "Zaloguj",
+            "forgetPassword":"Zapomniałeś hasła?"
+
+        },
+        "messages": {
+            "error": {
+                "authentication": "Niepoprawne logowanie! roszę sprawdzić wpisaną nazwę użytkownika i hasło."
+            }
+        }
+    }
+}

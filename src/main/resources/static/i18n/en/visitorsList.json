@@ -1,0 +1,30 @@
+{
+  "visitorsList":{
+    "search": {
+        "title":"Visitors",
+        "placeholder":"Search visitor"
+    },
+    "table":{
+      "title":"Visitors",
+      "filter":{
+          "showAll":"Show all",
+          "onlyWorkers":"Only workers",
+          "onlyVisitors":"Only guest"
+      },
+      "headers":{
+        "nameAndSurname":"Name and surname",
+        "documentIdentifier":"Identifier",
+        "action":"Action",
+        "confirmEmailAvailable":"Email notification",
+        "email":"Email"
+      ,
+        "phone":"Phone"
+      },
+      "button": {
+        "more": "More",
+        "delete":"Delete",
+        "details":"Details"
+      }
+    }
+  }
+}

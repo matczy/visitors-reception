@@ -1,0 +1,39 @@
+{
+  "registrationHistoryList":{
+    "search": {
+      "title":"Historia",
+      "placeholder":"Wyszukaj osobę lub przepustkę"
+    },
+    "table":{
+      "title":"Lista",
+      "filter":{
+        "showAll":"Pokaż wszystkich",
+        "onlyOnObject":"Tylko na obiekcie",
+        "onlyOutsideObject":"Tylko poza obiektem"
+      },
+      "headers":{
+
+        "nameAndSurname":"Imię i nazwisko ",
+        "contactPerson":"Do kogo",
+        "visitCardNumber":"Nr. przep",
+        "entryDate":"Data wejścia",
+        "exitDate":"Data wyjścia",
+        "action":"Akcja",
+        "comment":"Komentarz"
+
+
+      },
+      "content":{
+        "active":"Aktywna",
+        "notActive":"Nie aktywna",
+        "loadingData":"Ładowanie danych"
+      },
+      "button": {
+        "more": "Więcej",
+        "details":"Szczegóły",
+        "delete":"Usuń",
+        "release":"Wypuść"
+      }
+    }
+  }
+}

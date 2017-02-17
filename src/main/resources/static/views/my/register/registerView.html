@@ -1,0 +1,95 @@
+<div class="tabs-container">
+    <div  class="wrapper border-bottom white-bg page-heading" layout="row"  layout-align="space-around center" style="padding:15px">
+        <div style="font-size:24px" layout-padding>
+            {{'register.title' | translate}}
+        </div>
+
+        <div flex>
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div layout="row" layout-align="space-between center" >
+
+
+            <div class="ibox float-e-margins" flex>
+                <div class="ibox-content" style=" border-style: solid solid none; border-width: 3px 0 0;">
+                    <div class="alert alert-success" ng-show="ctrl.success">
+                        <strong>{{'register.message.success' | translate}}</strong>
+                    </div>
+                    <div class="alert alert-danger" ng-show="ctrl.error">
+                        <strong>{{'register.message.error.title' | translate}}</strong> {{'register.message.error.description' | translate}}
+                    </div>
+                    <div class="alert alert-danger" ng-show="ctrl.errorUserExists">
+                        <strong>{{'register.message.errorLogin.title' | translate}}</strong> {{'register.message.errorLogin.description' | translate}}
+                    </div>
+                    <div class="alert alert-danger" ng-show="ctrl.errorEmailExists">
+                        <strong>{{'register.message.errorEmail.title' | translate}}</strong> {{'register.message.errorEmail.description' | translate}}
+                    </div>
+                    <div class="alert alert-danger" ng-show="ctrl.doNotMatch">
+                        {{'register.message.errorPassword.title' | translate}}
+                    </div>
+
+
+                    <form role="form" name="form" novalidate>
+                        <div layout="row" layout-padding>
+                            <div flex="50" ng-class="{'has-error':form.usernameField.$touched && form.usernameField.$invalid}">
+                                <label>{{'register.form.userName.label' | translate}}</label>
+                                <input name="usernameField" ng-model="ctrl.registerAccount.login"
+                                       ng-minlength=1 ng-maxlength=50
+                                       ng-pattern="/^[a-z0-9]*$/" required type="text" class="form-control input-lg" placeholder="{{'register.form.userName.placeholder' | translate}}">
+                            </div>
+
+                            <div flex ng-class="{'has-error':form.emailField.$touched && form.emailField.$invalid}">
+                                <label>{{'register.form.email.label' | translate}}</label>
+                                <input name="emailField" ng-model="ctrl.registerAccount.email" ng-minlength=5 ng-maxlength=100
+                                       type="email" class="form-control input-lg" placeholder="{{'register.form.email.placeholder' | translate}}">
+
+                            </div>
+
+
+                        </div>
+                        <div layout="row" layout-padding>
+                            <div flex="50" ng-class="{'has-error':form.passwordField.$touched && form.passwordField.$invalid}">
+                                <label>{{'register.form.newPassword.label' | translate}}</label>
+                                <input name="passwordField" ng-model="ctrl.registerAccount.password" ng-minlength=5
+                                       ng-maxlength=50 required type="password" class="form-control input-lg" placeholder="{{'register.form.newPassword.placeholder' | translate}}">
+                            </div>
+                            <div flex ng-class="{'has-error':form.confirmPasswordField.$touched && form.confirmPasswordField.$invalid}">
+                                <label>{{'register.form.repeatPassword.label' | translate}}</label>
+                                <input name="confirmPasswordField" ng-model="ctrl.registerAccount.confirmPassword"
+                                       ng-minlength=5 ng-maxlength=50 required type="password" class="form-control input-lg" placeholder="{{'register.form.repeatPassword.placeholder' | translate}}">
+                            </div>
+                        </div>
+<!--//TODO do przerobienia styl-->
+                        <div layout="row" layout-padding>
+                            <div flex class="my-typehead-wrapper">
+                                <label>{{'register.form.authorities.label' | translate}}</label>
+                                <select chosen="{width: '100%'}" multiple
+                                        ng-model="ctrl.registerAccount.authorities"
+                                        ng-options="profile.name as profile.name for profile in ctrl.profiles"
+                                        name="profilesField"  data-placeholder="{{'register.form.authorities.placeholder' | translate}}" class="form-control input-lg">
+                                    <option value="">{{'register.form.authorities.option' | translate}}</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div layout="row" layout-padding>
+                                <button ng-disabled="form.$invalid" type ="submit" ng-click="ctrl.register()" flex class="btn btn-lg btn-primary "><strong>Zarejestruj</strong></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+

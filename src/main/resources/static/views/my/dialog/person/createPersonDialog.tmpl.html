@@ -1,0 +1,85 @@
+
+<div class="card">
+    <div layout="row" layout-align="start center" ></div>
+
+    <div class="modal-header">
+        <h3 class="modal-title">{{ctrl.model.title}}</h3>
+    </div>
+    <div class="modal-body">
+            <form role="form" name="form" novalidate>
+                <div layout="row" layout-padding>
+                    <div flex="50" ng-class="{'has-error':form.nameField.$touched && form.nameField.$invalid}">
+                        <label>{{'global.person.form.name.label' | translate}}</label>
+                        <input required ng-model="ctrl.model.person.name" type="text" placeholder="{{'global.person.form.name.placeholder' | translate}}" name="nameField" class="form-control input-lg">
+                    </div>
+                    <div flex ng-class="{'has-error':form.surnameField.$touched && form.surnameField.$invalid}">
+                        <label>{{'global.person.form.surname.label' | translate}}</label>
+                        <input required ng-model="ctrl.model.person.surname" type="text" placeholder="{{'global.person.form.surname.placeholder' | translate}}" name="surnameField" class="form-control input-lg">
+                    </div>
+
+                </div>
+                <div layout="row" layout-padding>
+                    <div flex="50" ng-class="{'has-error':form.documentIdentifierField.$touched && form.documentIdentifierField.$invalid}">
+                        <label>{{'global.person.form.documentIdentifier.label' | translate}}</label>
+                        <input required ng-model="ctrl.model.person.documentIdentifier" type="text" placeholder="{{'global.person.form.documentIdentifier.placeholder' | translate}}" name="documentIdentifierField" class="form-control input-lg">
+                    </div>
+                    <div flex >
+                        <label>{{'global.person.form.phone.label' | translate}}</label>
+                        <input  ng-model="ctrl.model.person.phone" type="text" placeholder="{{'global.person.form.phone.placeholder' | translate}}" name="phone" class="form-control input-lg">
+                    </div>
+                </div>
+
+
+                <div layout="row" layout-padding>
+                    <div flex>
+                        <label>{{'global.person.form.company.label' | translate}}</label>
+                        <div class="my-typehead-wrapper">
+                            <input type="text"
+                                   ng-model="ctrl.model.person.company" placeholder="{{'global.person.form.company.label' | translate}}"
+                                   uib-typeahead="company as company.name for company in ctrl.model.companies| filter:$viewValue"
+                                   typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                        </div>
+                    </div>
+                    <div flex ng-if="ctrl.privileges.adminRole">
+                        <label>{{'global.person.form.type.label' | translate}}</label>
+                        <div class="my-typehead-wrapper">
+                            
+                            <input type="text"
+                                   ng-model="ctrl.model.person.type" placeholder="{{'global.person.form.type.placeholder' | translate}}"
+                                   uib-typeahead="type as type.name for type in ctrl.model.personsType"
+                                   typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                        </div>
+                    </div>
+                </div>
+                 <div ng-if="ctrl.model.person.type.id=='1'" layout="row" layout-padding>
+
+                        <div flex ng-class="{'has-error':form.emailField.$touched && form.emailField.$invalid}">
+                            <label>{{'global.person.form.email.label' | translate}}</label>
+                            <input required ng-model="ctrl.model.person.email" type="email" placeholder="{{'global.person.form.email.placeholder' | translate}}" name="emailField" class="form-control input-lg">
+                        </div>
+                        <div flex>
+                            <label>{{'global.person.form.emailConfirm.label' | translate}} </label>
+                            <div>
+                                <md-checkbox ng-model="ctrl.model.person.confirmEmailAvailable">
+                                </md-checkbox>
+                            </div>
+
+                        </div>
+                 </div>
+
+
+            </form>
+
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ctrl.service.saveOrUpdate(ctrl.model.person)"
+                ng-disabled="form.$invalid">
+            {{'global.button.save' | translate}}
+        </button>
+        <button class="btn btn-default" ng-click="ctrl.service.cancel()">
+            {{'global.button.cancel' | translate}}
+        </button>
+
+    </div>
+</div>

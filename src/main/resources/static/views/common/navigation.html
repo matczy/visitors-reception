@@ -1,0 +1,53 @@
+<aside id="sidebar" class="my-sidebar">
+    <div>
+        <nav id="navsidebar" class="navbar-default navbar-static-side animate-show" role="navigation"
+             style="background-color: #2f4050; height: 100%;padding-top:14px"
+             data-ng-show="!mainCtrl.isCollapsedSidebar"
+        >
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li style="height:33px;">
+                        <div style="width:100%;">
+                            <div class="navsidebar-hide-button"
+                               ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar"
+                               style="width:100%;"><i class="fa fa-arrow-left" style="float:right"></i> </div>
+                        </div>
+                    </li>
+                    <li class="nav-header" style="padding-top:10px" show-if-authenticated="true">
+
+
+                        <div class="dropdown profile-element">
+                            <a >
+                            <span class="clear"> <span class="block m-t-xs"> <i class="fa fa-lg fa-user" style="margin-right:5px"> </i><strong class="font-bold"> {{mainCtrl.user.name}} {{mainCtrl.user.surname}}</strong></span></span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li ui-sref-active="active" show-if-authenticated="true" ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar">
+                        <a ui-sref="dashboard"><i class="fa fa-diamond"></i> <span class="nav-label">{{'global.navigation.dashboard' | translate}}</span> </a>
+                    </li>
+
+                    <li ui-sref-active="active" ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar">
+                        <a ui-sref="registrationVisitor"><i class="fa fa-diamond"></i> <span class="nav-label">{{'global.navigation.visitorRegistration' | translate}}</span> </a>
+                    </li>
+
+                    <li ui-sref-active="active" show-if-authenticated="true" ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar">
+                        <a ui-sref="visitorsList"><i class="fa fa-diamond"></i> <span class="nav-label">{{'global.navigation.visitorList' | translate}}</span> </a>
+                    </li>
+
+                    <li ui-sref-active="active" show-if-authenticated="true" ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar">
+                        <a ui-sref="visitCardsList"><i class="fa fa-diamond"></i> <span class="nav-label">{{'global.navigation.visitCardList' | translate}}</span> </a>
+                    </li>
+                    <li ui-sref-active="active" show-if-authenticated="true" ng-click="mainCtrl.isCollapsedSidebar = !mainCtrl.isCollapsedSidebar">
+                        <a ui-sref="registrationHistoryList"><i class="fa fa-diamond"></i> <span class="nav-label">{{'global.navigation.history' | translate}}</span> </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</aside>
+
+
+
+

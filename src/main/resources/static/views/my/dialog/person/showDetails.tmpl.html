@@ -1,0 +1,77 @@
+
+<div class="card">
+    <div layout="row" layout-align="start center" ></div>
+
+    <div class="modal-header">
+        <h3 class="modal-title">{{'global.person.title' |translate}}</h3>
+    </div>
+
+    <div class="modal-body">
+        <form role="form" name="form" novalidate>
+            <div layout="row" layout-padding>
+                <div flex="50">
+                    <label>{{'global.person.form.name.label' | translate}}</label>
+                    <input disabled ng-model="ctrl.model.data.name" type="text" placeholder="{{'global.person.form.name.placeholder' | translate}}" name="nameField" class="form-control input-lg">
+                </div>
+                <div flex>
+                    <label>{{'global.person.form.surname.label' | translate}}</label>
+                    <input disabled ng-model="ctrl.model.data.surname" type="text" placeholder="{{'global.person.form.surname.placeholder' | translate}}" name="surnameField" class="form-control input-lg">
+                </div>
+
+            </div>
+            <div layout="row" layout-padding>
+                <div flex="50">
+                    <label>{{'global.person.form.documentIdentifier.label' | translate}}</label>
+                    <input disabled ng-model="ctrl.model.data.documentIdentifier" type="text" placeholder="{{'global.person.form.documentIdentifier.placeholder' | translate}}" name="documentIdentifierField" class="form-control input-lg">
+                </div>
+                <div flex >
+                    <label>{{'global.person.form.phone.label' | translate}}</label>
+                    <input disabled ng-model="ctrl.model.data.phone || 'brak'" type="text" placeholder="{{'global.person.form.phone.placeholder' | translate}}" name="phone" class="form-control input-lg">
+                </div>
+            </div>
+
+
+            <div layout="row" layout-padding>
+                <div flex>
+                    <label>{{'global.person.form.company.label' | translate}}</label>
+                    <div class="my-typehead-wrapper">
+                        <input type="text" disabled  ng-model="ctrl.model.data.company.name || '-'" placeholder="{{'global.person.form.company.label' | translate}}" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                    </div>
+                </div>
+                <div flex ng-if="ctrl.privileges.adminRole">
+                    <label>{{'global.person.form.type.label' | translate}}</label>
+                    <div class="my-typehead-wrapper">
+
+                        <input type="text" disabled
+                               ng-model="ctrl.model.data.type.name" placeholder="{{'global.person.form.type.placeholder' | translate}}" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                    </div>
+                </div>
+            </div>
+            <div layout="row" layout-padding>
+
+                <div flex>
+                    <label>{{'global.person.form.email.label' | translate}}</label>
+                    <input required disabled ng-model="ctrl.model.data.email || 'Brak'" type="email" placeholder="{{'global.person.form.email.placeholder' | translate}}" name="emailField" class="form-control input-lg">
+                </div>
+                <div flex>
+                    <label>{{'global.person.form.emailConfirm.label' | translate}} </label>
+                    <div>
+                        <md-checkbox ng-disabled="true" ng-model="ctrl.model.data.confirmEmailAvailable "> </md-checkbox>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+    <div class="modal-footer">
+        <button class="btn btn-default" ng-click="ctrl.service.cancel()">
+            {{'global.button.close' | translate}}
+        </button>
+
+    </div>
+</div>

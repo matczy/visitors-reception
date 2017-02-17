@@ -1,0 +1,95 @@
+<div class="tabs-container">
+<div layout="column" layout-padding>
+     <div layout="row" layout-margin style="margin-bottom: 0; margin-top:0">
+        <div flex>
+            <div class="ibox " style="margin-bottom: 0">
+                <div class="ibox-title">
+                    <span class="pull-right"><h5>{{ctrl.model.allVisits||0}}</h5></span>
+                    <h5>{{'dashboard.tabs.allVisit.label' | translate}}</h5><span class="label label-success" style="margin-left:10px">{{'dashboard.tabs.allVisit.description' | translate}}</span>
+                </div>
+            </div>
+        </div>
+        <div flex>
+            <div class="ibox " style="margin-bottom: 0">
+                <div class="ibox-title">
+                    <span class="pull-right"><h5>{{ctrl.model.todayVisits||0}}</h5></span>
+                    <h5>{{'dashboard.tabs.todayVisit.label' | translate}}</h5><span class="label label-warning" style="margin-left:10px">{{'dashboard.tabs.todayVisit.description'| translate}}</span>
+                </div>
+
+            </div>
+        </div>
+        <div flex>
+            <div class="ibox " style="margin-bottom: 0">
+                <div class="ibox-title">
+                    <span class="pull-right"><h5>{{ctrl.model.visitorsOnObject||0}}</h5></span>
+                    <h5>{{'dashboard.tabs.visitorsOnObject.label' | translate}}</h5><span class="label label-danger" style="margin-left:10px">{{'dashboard.tabs.visitorsOnObject.description' | translate}}</span>
+                </div>
+
+            </div>
+        </div>
+        <div flex>
+            <div class="ibox " style="margin-bottom: 0">
+                <div class="ibox-title">
+                    <span class="pull-right"><h5>{{ctrl.model.activeVisitCard||0}}</h5></span>
+                    <h5>{{'dashboard.tabs.visitCard.label' | translate}}</h5><span class="label label-primarry" style="margin-left:10px">{{'dashboard.tabs.visitCard.description' | translate}}</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div layout="row" layout-margin style="margin-top:0">
+              <div flex>
+                  <div class="ibox float-e-margins">
+                  <div class="ibox-title">
+                      <h5>{{'dashboard.plots.last24h.title' | translate}}</h5>
+                  </div>
+                  <div class="ibox-content">
+
+                      <div class="row">
+                          <div class="col-lg-12">
+                              <div class="panel-body">
+                                  <canvas   class="chart chart-bar"
+                                            chart-data="ctrl.model.chartLastDayByHourVisit.data"
+                                            chart-labels="ctrl.model.chartLastDayByHourVisit.labels"
+                                            chart-series="ctrl.model.chartLastDayByHourVisit.series"
+                                            height="75">
+                                  </canvas>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>{{'dashboard.plots.last30Days.title' | translate}}</h5>
+                            </div>
+                            <div class="ibox-content">
+                                   <div class="row">
+                                          <div class="col-lg-12">
+                                                 <div class="panel-body">
+                                                 <canvas   class="chart chart-bar"
+                                                         chart-data="ctrl.model.chartLast30DaysVisit.data"
+                                                         chart-labels="ctrl.model.chartLast30DaysVisit.labels"
+                                                         chart-series="ctrl.model.chartLast30DaysVisit.series"
+                                                         height="75">
+                                                 </canvas>
+                                                 </div>
+                                          </div>
+
+                                   </div>
+                            </div>
+
+
+
+              </div>
+    </div>
+</div>
+
+
+</div>
+
+</div>
+
+

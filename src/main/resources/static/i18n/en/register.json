@@ -1,0 +1,46 @@
+{
+  "register":{
+    "title":"Register account",
+    "message":{
+      "success":"Success registration",
+      "error":{
+        "title":"Fail registration",
+        "description":"Please try again."
+      },
+      "errorLogin":{
+        "title":"Login is already in use",
+        "description":"Please choose another."
+      },
+      "errorEmail":{
+        "title":"E-mail is already in use",
+        "description":"Please choose aother."
+      },
+      "errorPassword":{
+        "title":"The passwords do not match!"
+      }
+    },
+    "form":{
+      "userName":{
+        "label":"User name*",
+        "placeholder":"User name"
+      },
+      "email":{
+        "label":"E-mail",
+        "placeholder":"E-mail"
+      },
+      "newPassword":{
+        "label":"New password*",
+        "placeholder":"New password"
+      },
+      "repeatPassword":{
+        "label":"Repeat password*",
+        "placeholder":"Repeat password"
+      },
+      "authorities":{
+        "label":"Authorities",
+        "placeholder":"Authorities",
+        "option":"Select authorities"
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+
+
+
+<div  class="wrapper border-bottom white-bg" layout="row"  layout-align="space-around center" style="padding:15px">
+    <div style="font-size:24px" layout-padding>
+        {{'registrationHistoryList.search.title' | translate}}
+    </div>
+
+    <div flex layout-padding>
+        <input ng-model="ctrl.searcher.searchText" ng-change="ctrl.service.callServerForData(1)" type="text" placeholder="{{'registrationHistoryList.search.placeholder' | translate}}" class="form-control input-lg m-b" style="margin-bottom: 0;">
+    </div>
+    <!---->
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div layout="row" layout-align="space-between center" >
+
+
+        <div class="ibox float-e-margins" flex>
+            <div class="ibox-title">
+                <div layout="row">
+                    <div layout-padding style="font-size:17px;padding-top:4px;margin-right:20px" >{{'registrationHistoryList.table.title' | translate}}</div>
+                    <div>
+                        <div class="btn-group" style="margin-right: 20px">
+                            <label class="btn btn-sm btn-white" ng-model="ctrl.model.typeShowData" uib-btn-radio="'ALL'" ng-change="ctrl.service.callServerForData(1)">{{'registrationHistoryList.table.filter.showAll' | translate}}</label>
+                        </div>
+                        <div class="btn-group">
+                            <label class="btn btn-sm btn-white" ng-model="ctrl.model.typeShowData" uib-btn-radio="'ON_OBJECT'" ng-change="ctrl.service.callServerForData(1)">{{'registrationHistoryList.table.filter.onlyOnObject' | translate}}</label>
+                            <label class="btn btn-sm btn-white" ng-model="ctrl.model.typeShowData" uib-btn-radio="'OUTSIDE_OBJECT'" ng-change="ctrl.service.callServerForData(1)">{{'registrationHistoryList.table.filter.onlyOutsideObject' | translate}}</label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="ibox-content" >
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr layout="row">
+                            <th flex><div>{{'registrationHistoryList.table.headers.nameAndSurname' | translate}}</div></th>
+                            <th flex><div>{{'registrationHistoryList.table.headers.contactPerson' | translate}}</div></th>
+                            <th flex="10"><div>{{'registrationHistoryList.table.headers.visitCardNumber' | translate}}</div></th>
+                            <th flex="15"><div>{{'registrationHistoryList.table.headers.entryDate' | translate}}</div></th>
+                            <th flex="15"><div>{{'registrationHistoryList.table.headers.exitDate' | translate}}</div></th>
+                            <th flex="15"><div>{{'registrationHistoryList.table.headers.action' | translate}}</div></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-show="ctrl.model.historyData.length <= 0"><td colspan="7" style="text-align:center;">{{'registrationHistoryList.content.loadingData' | translate}}</td></tr>
+                        <tr layout="row" dir-paginate="data in ctrl.model.historyData|itemsPerPage:ctrl.model.paging.itemsPerPage" total-items="ctrl.model.paging.total_count">
+                            <td flex>
+                                <display_person_row person="person"></display_person_row>
+                            </td>
+
+                            <td flex>
+                                <display_person_row person="contactPerson"></display_person_row>
+                            </td>
+                            <td flex="10"><div>{{data.visitCard.id}}</div></td>
+                            <td flex="15"><div>{{data.entryDate | date:'yyyy-MM-dd HH:mm'}}</div></td>
+                            <td flex="15"><div>{{data.exitDate | date:'yyyy-MM-dd HH:mm'}}</div></td>
+                            <td flex="15">
+                                <!--<span create-visit-card-button visitor="data.person" contact-person="data.contactPerson">  </span>-->
+                                <button ng-click="ctrl.service.showDetails(data)"  type ="button" class="btn btn-sm btn-default">{{'registrationHistoryList.table.button.details' | translate}}</button>
+                                <button ng-click="ctrl.service.registerExitAction(data)" ng-if="data.entryDate && !data.exitDate" type ="button" class="btn btn-sm btn-danger"><i class="fa fa-minus"></i>{{'registrationHistoryList.table.button.release' | translate}}</button>
+
+                            </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                    <dir-pagination-controls
+                            max-size="10"
+                            direction-links="true"
+                            boundary-links="true"
+                            on-page-change="ctrl.service.callServerForData(newPageNumber)">
+                    </dir-pagination-controls>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+

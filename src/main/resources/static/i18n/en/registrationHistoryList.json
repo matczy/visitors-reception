@@ -1,0 +1,38 @@
+{
+  "registrationHistoryList":{
+    "search": {
+      "title":"History",
+      "placeholder":"Search visitor or visit card"
+    },
+    "table":{
+      "title":"List",
+      "filter":{
+        "showAll":"Show all",
+        "onlyOnObject":"Only on object",
+        "onlyOutsideObject":"Only outside on object"
+      },
+      "headers":{
+
+        "nameAndSurname":"Name and surname ",
+        "contactPerson":"Contact person",
+        "visitCardNumber":"Visit card nr",
+        "entryDate":"Entry date",
+        "exitDate":"Exit date",
+        "action":"Action",
+        "comment":"Comment"
+
+      },
+      "content":{
+        "active":"Active",
+        "notActive":"Not active",
+        "loadingData":"Loading data"
+      },
+      "button": {
+        "more": "More",
+        "details":"Details",
+        "delete":"Delete",
+        "release":"Release"
+      }
+    }
+  }
+}

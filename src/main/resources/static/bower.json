@@ -1,0 +1,51 @@
+{
+  "name": "VISITORAPP",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "jquery": "latest",
+    "jquery-ui": "latest",
+    "angular": "1.5.0-rc.0",
+    "bootstrap": "latest",
+    "angular-sanitize": "latest",
+    "angular-animate": "latest",
+    "angular-local-storage": "latest",
+    "angular-ui-router": "latest",
+    "angular-dynamic-locale": "0.1.28",
+    "angular-resource": "latest",
+    "requirejs": "latest",
+    "font-awesome": "latest",
+    "angular-i18n": "latest",
+    "angular-ui-utils": "bower",
+    "angular-ui-select": "latest",
+    "angular-material": "1.0.6",
+    "angular-aria": "latest",
+    "material-shadows": "latest",
+    "lodash": "latest",
+    "moment": "latest",
+    "moment-duration-format": "latest",
+    "angular-moment":"latest",
+    "material-design-iconic-font": "latest",
+    "Chart.js": "^1.0.2",
+    "angular-chart": "latest",
+    "angular-chosen-localytics": "~1.0.7",
+    "angular-xeditable": "latest",
+    "angular-chart.js": "^0.8.8",
+    "toastr":"latest",
+    "angular-bootstrap":"latest",
+    "restangular":"latest",
+    "angular-translate": "2.8.1",
+    "angular-translate-interpolation-messageformat": "2.8.1",
+    "angular-translate-loader-partial": "2.8.1",
+    "angular-translate-storage-cookie": "2.8.1",
+    "angular-utils-pagination":"latest"
+
+
+  },
+  "scripts": {
+    "install": "npm install; bower install --allow-root"
+  },
+  "resolutions": {
+    "angular": "latest"
+  }
+}

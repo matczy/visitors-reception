@@ -1,0 +1,35 @@
+{
+  "visitCardsList":{
+    "search": {
+        "title":"Visit cards",
+        "placeholder":"Select visit card"
+    },
+    "table":{
+      "title":"Visit cards",
+      "filter":{
+          "showAll":"Show all",
+          "onlyActive":"Only active",
+          "onlyNotActive":"Only not active"
+      },
+      "headers":{
+        "status":"Status",
+        "dates":"Validity",
+        "nameAndSurname":"Name and surname",
+        "contactPerson":"Contact person",
+        "createdDate":"Created date",
+        "action":"Action",
+        "number":"Number"
+      },
+      "content":{
+        "active":"Active",
+        "notActive":"Not active"
+      },
+      "button": {
+        "more": "More",
+        "deactivate":"Deactivate",
+        "print":"Print",
+        "details":"Details"
+      }
+    }
+  }
+}

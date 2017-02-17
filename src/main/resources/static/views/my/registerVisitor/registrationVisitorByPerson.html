@@ -1,0 +1,100 @@
+<div class="tabs-container">
+            <div  class="wrapper border-bottom white-bg page-heading" layout="row"  layout-align="space-around center" style="padding:15px">
+                <div style="font-size:24px" layout-padding>
+                    {{'registrationVisitor.singleVisitor.mainTitle' | translate}}
+                </div>
+
+                <div flex>
+                    <div class="my-typehead-wrapper">
+                        <input type="text"
+                               ng-model="ctrl.searcher.person" placeholder="{{'registrationVisitor.singleVisitor.form.searchPerson.placeholder' | translate}}"
+                               uib-typeahead="person as person.name+' '+person.surname+' '+person.documentIdentifier for person in ctrl.searcher.searchPersonsSuggestions($viewValue)"
+                               typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div layout="row" layout-align="space-between center" >
+
+
+                    <div class="ibox float-e-margins" flex>
+                        <div class="ibox-content" style=" border-style: solid solid none; border-width: 3px 0 0;">
+                            <form role="form" name="form" novalidate>
+                                <div layout="row" layout-padding>
+                                    <div flex="50" ng-class="{'has-error':form.nameField.$touched && form.nameField.$invalid}">
+                                        <label>{{'registrationVisitor.singleVisitor.form.name.label' | translate}}</label>
+                                        <input required ng-model="ctrl.model.person.name" ng-change ="ctrl.service.manuallyChange()" type="text" placeholder="{{'registrationVisitor.singleVisitor.form.name.placeholder' | translate}}" name="nameField" class="form-control input-lg">
+                                    </div>
+                                    <div flex ng-class="{'has-error':form.surnameField.$touched && form.surnameField.$invalid}">
+                                        <label>{{'registrationVisitor.singleVisitor.form.surname.label' | translate}}</label>
+                                        <input required ng-model="ctrl.model.person.surname" ng-change ="ctrl.service.manuallyChange()" type="text" placeholder="{{'registrationVisitor.singleVisitor.form.surname.placeholder' | translate}}" name="surnameField" class="form-control input-lg">
+
+
+                                    </div>
+
+
+                                </div>
+                                <div layout="row" layout-padding>
+                                    <div flex="50" ng-class="{'has-error':form.documentIdentifierField.$touched && form.documentIdentifierField.$invalid}">
+                                        <label>{{'registrationVisitor.singleVisitor.form.documentIdentifier.label' | translate}}</label>
+                                        <input required ng-model="ctrl.model.person.documentIdentifier" ng-change ="ctrl.service.manuallyChange()" type="text" placeholder="{{'registrationVisitor.singleVisitor.form.documentIdentifier.placeholder' | translate}}" name="documentIdentifierField" class="form-control input-lg">
+                                    </div>
+                                    <div flex>
+                                        <label>{{'registrationVisitor.singleVisitor.form.company.label' | translate}}</label>
+                                        <div class="my-typehead-wrapper">
+                                            <input type="text"
+                                                   ng-model="ctrl.model.person.company" ng-change ="ctrl.service.manuallyChange()" placeholder="{{'registrationVisitor.singleVisitor.form.company.placeholder' | translate}}"
+
+                                                   uib-typeahead="company as company.name for company in ctrl.searcher.searchCompanySuggestions($viewValue)"
+                                                   typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div layout="row" layout-padding>
+                                    <div flex>
+                                        <label>{{'registrationVisitor.singleVisitor.form.contactPerson.label' | translate}}</label>
+                                        <div class="my-typehead-wrapper">
+                                            <input type="text"
+                                                   ng-model="ctrl.model.contactPerson" placeholder="{{'registrationVisitor.singleVisitor.form.contactPerson.placeholder' | translate}}"
+                                                   uib-typeahead="person as person.name+' '+person.surname+' '+person.documentIdentifier+' '+person.phone for person in ctrl.searcher.searchContactPersonsSuggestions($viewValue)"
+                                                   typeahead-min-length="0" class="form-control input-lg m-b" style="margin-bottom: 0;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div layout="row" layout-padding show-if-authenticated="true">
+                                    <div flex="50">
+                                        <!--//TODO add translate-->
+                                        <label>Data od*</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control input-lg" date-time ng-model="ctrl.model.visitCard.dateFrom" auto-close="true" view="date" min-view="minutes" format="YYYY-MM-DD HH:mm">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+
+                                    </div>
+                                    <div flex>
+                                        <!--//TODO add translate-->
+
+                                        <label>Data do*</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control input-lg" date-time ng-model="ctrl.model.visitCard.dateTo"  auto-close="true" view="date" min-view="minutes"  format="YYYY-MM-DD HH:mm" >
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div layout="row" layout-padding>
+                                    <button ng-disabled="form.$invalid" type ="submit" ng-click="ctrl.service.register(ctrl.model.person, ctrl.model.contactPerson)" flex class="btn btn-lg btn-primary "><strong>{{'registrationVisitor.singleVisitor.form.button.entry' | translate}}</strong></button>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+</div>
+
+

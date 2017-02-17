@@ -1,0 +1,31 @@
+{
+  "visitorsList":{
+    "search": {
+        "title":"Goście",
+        "placeholder":"Wyszukaj osobę"
+    },
+    "table":{
+      "title":"Lista gości",
+      "filter":{
+          "showAll":"Pokaż wszystkie",
+          "onlyWorkers":"Tylko pracownicy",
+          "onlyVisitors":"Tylko goście"
+      },
+      "headers":{
+        "nameAndSurname":"Imię i nazwisko",
+        "documentIdentifier":"Identyfikator",
+        "action":"akcja",
+        "confirmEmailAvailable":"notyfikacja email",
+        "email":"Email"
+      ,
+        "phone":"Telefon"
+      },
+      "button": {
+        "more": "Więcej",
+        "delete":"Usuń",
+        "details":"Details"
+
+      }
+    }
+  }
+}

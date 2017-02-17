@@ -1,0 +1,56 @@
+{
+  "account":{
+    "title":"Zresetuj hasło",
+    "finish":{
+      "keymissing":"Brak klucza resetującego hasłó.",
+      "dontmatch":"Hasło i jego potwierdzenie nie pasują",
+      "messages":{
+        "info":"Qybierz nowe hasło",
+        "error":"Twoje hasło nie może być zresetowane. Pamiętaj rządanie zresetowania hasła jest ważne tylko 24h",
+        "success":"<strong>Twoje hasło zostało zresetowane</strong> Proszę <a class='alert-link' href='#/login'>zaloguj się</a>.</p>"
+      },
+      "form":{
+        "newpassword":{
+          "label":"Nowe hasło",
+          "placeholder":"Nowe hasło",
+          "validation":{
+            "required":"Your password is required.",
+            "minlength":"Your password is required to be at least 5 characters.",
+            "maxlength":"Your password cannot be longer than 50 characters."
+          }
+        },
+        "confirmPassword":{
+          "label":"Potwierdź nowe hasło",
+          "placeholder":"Potwierdź nowe hasło",
+          "validation":{
+            "required":"Your password is required.",
+            "minlength":"Your password confirmation is required to be at least 5 characters.",
+            "maxlength":"Your password confirmation cannot be longer than 50 characters."
+          }
+        },
+        "button":"Zresetuj hasło"
+      }
+    },
+    "request":{
+      "messages":{
+        "notfound":"<strong>E-Mail adres nie jest zarejestrowany!</strong> Sprawdź i spróbuj ponownie",
+        "info":"Wpisz e-mail użyty podczas rejestracji.",
+        "success":"Sprawdź swój e-mail w celu zresetowania hasła."
+      },
+      "form":{
+        "email":{
+          "label":"E-mail",
+          "placeholder":"E-mail",
+          "validation":{
+            "required":"Your e-mail is required.",
+            "invalid":"Your e-mail is invalid.",
+            "minlength":"Your e-mail is required to be at least 5 characters.",
+            "maxlength":"Your e-mail cannot be longer than 100 characters."
+          }
+        },
+
+        "button":"Zresetuj"
+      }
+    }
+  }
+}
